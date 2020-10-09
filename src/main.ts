@@ -1,8 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
+/** polyfill */
+import "core-js/features/reflect";
 
-Vue.config.productionTip = false
+import Vue from "vue";
+import App from "./App.vue";
+import './assets/styles/index.css';
+
+Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
-}).$mount('#app')
+}).$mount("#app");
