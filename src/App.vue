@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-full w-full  bg-gray-400">
+  <div id="app" class="h-full w-full  bg-gray-200">
     <Wall></Wall>
   </div> 
 </template>
@@ -23,6 +23,11 @@ export default class App extends Vue {}
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: rgb(233, 232, 232);
 }
+
+
+body {
+    background: #edf2f7;
+}
+
 </style>

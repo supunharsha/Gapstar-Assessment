@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Post from '@/components/Post.vue'
-import IPost from '@/types/IPost' 
+import IPost from '@/types/Post' 
 
 describe('Post.vue', () => {
 
@@ -51,12 +51,5 @@ describe('Post.vue', () => {
         expect((wrapper.emitted('movePost'))).toStrictEqual([[post.id, 1]]);
     })
 
-    it('post should be able to get the postId', () => {
-        const wrapper = shallowMount(Post, {
-            propsData: {
-            }
-        });
-        expect((wrapper.vm as any).postId).toBeUndefined()
-    })
 })
 

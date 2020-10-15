@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import Actions from '@/components/Actions.vue'
-import IAction from '@/types/IAction'
+import IAction from '@/types/Action'
 
 describe('Actions.vue', () => {
 

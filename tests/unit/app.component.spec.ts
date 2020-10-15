@@ -1,8 +1,8 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-describe('Wall.vue', () => {
-  it('number of posts should be 5 ', () => {
+describe('App.vue', () => {
+  it('instance should be a vue instance ', () => {
 
     const wrapper = shallowMount(App, {
     })

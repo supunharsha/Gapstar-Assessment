@@ -10,12 +10,12 @@
                 </div>  
             </div>
             <div class="flex flex-col justify-center">
-                <div id="up-arrow" v-if="!isFirst" @click="changePostion(postId, -1)">
+                <div v-if="!isFirst" @click="changePostion(postId, -1)">
                     <i class="arrow up"></i>
                 </div>
                 <div>
                 </div>
-                <div id="down-arrow" v-if="!isLast" @click="changePostion(postId, +1)">
+                <div v-if="!isLast" @click="changePostion(postId, +1)">
                     <i class="arrow down"></i>
                 </div>  
             </div>  
@@ -25,21 +25,22 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Emit } from 'vue-property-decorator';
-import IPost from '@/types/IPost' 
+import IPost from '@/types/Post' 
 
 @Component
 export default class Post extends Vue {
-    @Prop() readonly post: IPost | undefined; 
-    @Prop() readonly isFirst: boolean | undefined;
-    @Prop() readonly isLast: boolean | undefined;
+    
+    @Prop() readonly post!: IPost; 
+    @Prop() readonly isFirst!: boolean;
+    @Prop() readonly isLast!: boolean ;
 
     @Emit('movePost')
     changePostion(id: number, value: number) {
         return
     } 
 
-    get postId(): any {
-        return this.post? this.post.id : undefined
+    get postId(): number {
+        return this.post.id
     }
 
 }
